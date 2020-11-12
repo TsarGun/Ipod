@@ -13,9 +13,17 @@
 <script type="text/babel">
   function OurFirstComponent() {
     return (
-      <h1>Hello, I am a React Component!</h1>
+      <h1>I am the child!</h1>
+    );
+  }
+  function Container() {
+    return (
+      <div>
+        <h1>I am the parent!</h1>
+        <OurFirstComponent />
+      </div>
     );
   }
   const placeWeWantToPutComponent = document.getElementById('hook');
-  ReactDOM.render(OurFirstComponent(), placeWeWantToPutComponent);
+  ReactDOM.render(<Container />, placeWeWantToPutComponent);
 </script>
